@@ -1,0 +1,11 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone:  http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    #Eureka服务端最后一次接收到心跳后的等待的上限时间  默认是90s   单位秒
+    lease-expiration-duration-in-seconds: 2
+    #Eureka客户端定时向服务端发送心跳的间隔时间 默认30秒 单位秒
+    lease-renewal-interval-in-seconds: 1
